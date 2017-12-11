@@ -103,7 +103,10 @@ void MinXmlHttpRequest::_gotHeader(string& header)
                 mystream << pch;
 
                 pch = strtok (NULL, " ");
-                mystream << " " << pch;
+                mystream << " ";
+                if (pch != NULL) {
+                    mystream << pch;
+                }
 
                 _statusText = mystream.str();
 
